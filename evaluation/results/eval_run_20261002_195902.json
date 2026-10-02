@@ -1,0 +1,161 @@
+{
+  "created_at_utc": "2026-10-02T19:59:02.665706+00:00",
+  "summary": {
+    "total_cases": 5,
+    "answer_accuracy": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "tool_argument_accuracy": 1.0,
+    "trajectory_accuracy": 1.0,
+    "average_extra_tool_calls": 0.0,
+    "average_judge_score": 5.0,
+    "judge_pass_rate": 1.0,
+    "task_success_rate": 1.0
+  },
+  "results": [
+    {
+      "id": "test_001",
+      "question": "What is the status of order 1002?",
+      "expected_answer_contains": "shipped",
+      "expected_tool": "get_order_status",
+      "expected_args": {
+        "order_id": "1002"
+      },
+      "expected_trajectory": [
+        "get_order_status"
+      ],
+      "actual_answer": "Order 1002 has shipped.",
+      "actual_tool": "get_order_status",
+      "actual_args": {
+        "order_id": "1002"
+      },
+      "actual_trajectory": [
+        "get_order_status"
+      ],
+      "answer_ok": true,
+      "tool_ok": true,
+      "args_ok": true,
+      "trajectory_ok": true,
+      "extra_tool_calls": 0,
+      "judge_score": 5,
+      "judge_passed": true,
+      "judge_reason": "The answer clearly states that order 1002 has shipped, matching the expected status.",
+      "task_success": true
+    },
+    {
+      "id": "test_002",
+      "question": "What is the status of order 1003?",
+      "expected_answer_contains": "delivered",
+      "expected_tool": "get_order_status",
+      "expected_args": {
+        "order_id": "1003"
+      },
+      "expected_trajectory": [
+        "get_order_status"
+      ],
+      "actual_answer": "Order 1003 has been delivered.",
+      "actual_tool": "get_order_status",
+      "actual_args": {
+        "order_id": "1003"
+      },
+      "actual_trajectory": [
+        "get_order_status"
+      ],
+      "answer_ok": true,
+      "tool_ok": true,
+      "args_ok": true,
+      "trajectory_ok": true,
+      "extra_tool_calls": 0,
+      "judge_score": 5,
+      "judge_passed": true,
+      "judge_reason": "The answer correctly states that order 1003 has been delivered, matching the expected status.",
+      "task_success": true
+    },
+    {
+      "id": "test_003",
+      "question": "What is 25 multiplied by 4?",
+      "expected_answer_contains": "100",
+      "expected_tool": "calculator",
+      "expected_args": {
+        "a": 25,
+        "b": 4,
+        "operation": "multiply"
+      },
+      "expected_trajectory": [
+        "calculator"
+      ],
+      "actual_answer": "100",
+      "actual_tool": "calculator",
+      "actual_args": {
+        "a": 25.0,
+        "b": 4.0,
+        "operation": "multiply"
+      },
+      "actual_trajectory": [
+        "calculator"
+      ],
+      "answer_ok": true,
+      "tool_ok": true,
+      "args_ok": true,
+      "trajectory_ok": true,
+      "extra_tool_calls": 0,
+      "judge_score": 5,
+      "judge_passed": true,
+      "judge_reason": "The answer exactly matches the expected result: 25 multiplied by 4 is 100.",
+      "task_success": true
+    },
+    {
+      "id": "test_004",
+      "question": "What is 12 divided by 3?",
+      "expected_answer_contains": "4",
+      "expected_tool": "calculator",
+      "expected_args": {
+        "a": 12,
+        "b": 3,
+        "operation": "divide"
+      },
+      "expected_trajectory": [
+        "calculator"
+      ],
+      "actual_answer": "4",
+      "actual_tool": "calculator",
+      "actual_args": {
+        "a": 12.0,
+        "b": 3.0,
+        "operation": "divide"
+      },
+      "actual_trajectory": [
+        "calculator"
+      ],
+      "answer_ok": true,
+      "tool_ok": true,
+      "args_ok": true,
+      "trajectory_ok": true,
+      "extra_tool_calls": 0,
+      "judge_score": 5,
+      "judge_passed": true,
+      "judge_reason": "The actual answer exactly matches the expected answer.",
+      "task_success": true
+    },
+    {
+      "id": "test_005",
+      "question": "What is the capital of France?",
+      "expected_answer_contains": "Paris",
+      "expected_tool": null,
+      "expected_args": null,
+      "expected_trajectory": [],
+      "actual_answer": "The capital of France is Paris.",
+      "actual_tool": null,
+      "actual_args": null,
+      "actual_trajectory": [],
+      "answer_ok": true,
+      "tool_ok": true,
+      "args_ok": true,
+      "trajectory_ok": true,
+      "extra_tool_calls": 0,
+      "judge_score": 5,
+      "judge_passed": true,
+      "judge_reason": "The answer correctly and clearly identifies Paris as the capital of France.",
+      "task_success": true
+    }
+  ]
+}

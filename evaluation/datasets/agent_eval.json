@@ -1,0 +1,62 @@
+[
+  {
+    "id": "test_001",
+    "question": "What is the status of order 1002?",
+    "expected_answer_contains": "shipped",
+    "expected_tool": "get_order_status",
+    "expected_args": {
+      "order_id": "1002"
+    },
+    "expected_trajectory": [
+      "get_order_status"
+    ]
+  },
+  {
+    "id": "test_002",
+    "question": "What is the status of order 1003?",
+    "expected_answer_contains": "delivered",
+    "expected_tool": "get_order_status",
+    "expected_args": {
+      "order_id": "1003"
+    },
+    "expected_trajectory": [
+      "get_order_status"
+    ]
+  },
+  {
+    "id": "test_003",
+    "question": "What is 25 multiplied by 4?",
+    "expected_answer_contains": "100",
+    "expected_tool": "calculator",
+    "expected_args": {
+      "a": 25,
+      "b": 4,
+      "operation": "multiply"
+    },
+    "expected_trajectory": [
+      "calculator"
+    ]
+  },
+  {
+    "id": "test_004",
+    "question": "What is 12 divided by 3?",
+    "expected_answer_contains": "4",
+    "expected_tool": "calculator",
+    "expected_args": {
+      "a": 12,
+      "b": 3,
+      "operation": "divide"
+    },
+    "expected_trajectory": [
+      "calculator"
+    ]
+  },
+  {
+    "id": "test_005",
+    "question": "What is the capital of France?",
+    "expected_answer_contains": "Paris",
+    "expected_tool": null,
+    "expected_args": null,
+    "expected_trajectory": []
+  }
+]
